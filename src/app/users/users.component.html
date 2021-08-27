@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="container">
+    <h2 class="mb-5 text-secondary mt-4">Clientes</h2>
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Username</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let group of data">
+          <td>{{ group.id }}</td>
+          <td>{{ group.email }}</td>
+          <td>{{ group.username }}</td>
+          <td>
+            <button
+              class="btn btn-outline-info m-1"
+              routerLink="/user/{{ group.id }}"
+            >
+              Ver
+            </button>
+            <button
+              class="btn btn-outline-success m-1"
+              routerLink="/edit/{{ group.id }}"
+            >
+              Editar
+            </button>
+            <button
+              class="btn btn-outline-danger m-1"
+              (click)="deleteuser(group.id)"
+            >
+              Borrar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
