@@ -1,23 +1,32 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { UsersComponent } from './users/users.component';
-import { AdduserComponent } from './add-user/add-user.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './header/header.component';
-import { UserComponent } from './user/user.component';
-import { EditComponent } from './edit/edit.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { UsersComponent } from "./users/users.component";
+import { AdduserComponent } from "./add-user/add-user.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { HeaderComponent } from "./header/header.component";
+import { UserComponent } from "./user/user.component";
+import { EditComponent } from "./edit/edit.component";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent, AdduserComponent, HeaderComponent, UserComponent, EditComponent],
+  declarations: [
+    AppComponent,
+    UsersComponent,
+    AdduserComponent,
+    HeaderComponent,
+    UserComponent,
+    EditComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

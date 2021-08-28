@@ -1,1 +1,23 @@
+#header {
+  height: 80px;
+  transition: all 0.5s;
+  z-index: 997;
+  justify-content: space-between;
+  padding: 20px 0;
+  background: rgb(55, 56, 57);
+}
+#header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  padding: 4px 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: rgb(252, 252, 252);
+  text-decoration: none;
+}

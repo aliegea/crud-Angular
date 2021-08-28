@@ -1,31 +1,52 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/users']">Gestor de Clientes</a>
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div>
+    <div class="logo">
+      <h1 class="text-light">
+        <a routerLink="/users"><span>Gestor de Clientes</span></a>
+      </h1>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-lightng">
     <button
       class="navbar-toggler"
       type="button"
       data-toggle="collapse"
       data-target="#navbarNav"
       aria-controls="navbarNav"
-      aria-expanded="false"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link text-secondary" [routerLink]="['/users']">
-            Listado de Clientes</a
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav"
+      [ngbCollapse]="isCollapsed"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item mobile">
+          <a
+            class="nav-link text-text light"
+            [routerLink]="['/users']"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+          >
+            LISTADO DE CLIENTES</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link text-secondary" [routerLink]="['/adduser']"
-            >Añadir Clientes</a
+          <a
+            class="nav-link text-light"
+            [routerLink]="['/adduser']"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            >AÑADIR CLIENTES</a
           >
         </li>
       </ul>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
+
 <router-outlet></router-outlet>

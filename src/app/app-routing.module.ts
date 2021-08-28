@@ -4,6 +4,7 @@ import { UsersComponent } from "./users/users.component";
 import { AdduserComponent } from "./add-user/add-user.component";
 import { UserComponent } from "./user/user.component";
 import { EditComponent } from "./edit/edit.component";
+
 const routes: Routes = [
   // { path: '', component: UsersComponent },
   { path: "users", component: UsersComponent },
